@@ -1,15 +1,22 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Hello from './Component/Hello'
+import { Profile, UserList } from './Page/pages'
 
 function App() {
+  let user = {
+    email: "pluczak@myges.fr",
+    firstname: "Pierre-Henri",
+    lastname: "Luczak",
+    role: "admin",
+  }
+
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/Home" element={<Hello firstname="Mathou" />} />
+          <Route path="/Profile" element={<Profile user={user} />} />
+          <Route path="/Users" element={<UserList />} />
         </Routes>
       </BrowserRouter>
     </>

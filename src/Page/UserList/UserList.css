@@ -1,0 +1,8 @@
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #f7f8fa;
+  min-height: 100vh;
+}
